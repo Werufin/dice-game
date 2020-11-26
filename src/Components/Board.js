@@ -33,9 +33,8 @@ class Board extends React.Component {
 
     render() {
         return (
-            <div>
-                <h3>{this.props.playerName}  {this.props.myTurn ? "(Playing...)" : "(Waiting...)"}</h3>
-
+            <div className="flex-1 item-center justify-center p-4 bg-white shadow-lg sm:rounded-3xl">
+                <h3 className="text-xl">{this.props.playerName} {this.props.myTurn ? "(Playing...)" : "(Waiting...)"}</h3>
                 <NewRoll
                     dices={this.state.dices}
                     onButtonClick={this.rollDices}
@@ -80,7 +79,7 @@ class Board extends React.Component {
 
     rollDices = (e) => {
         const rollDice = () => {
-            const min = 1;
+            const min = 0;
             const max = faces.length;
             return Math.floor(min + Math.random() * (max - min));
         }

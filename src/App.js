@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import Board from './Components/Board'
-
+import './tailwind.css'
 
 class App extends React.Component {
 
@@ -25,7 +25,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="min-h-screen bg-gray-100 py-6 flex content-center">
         <Board playerName="Player 1" myTurn={this.state.p1Turn} endTurn={this.swapTurn} />
         <Board playerName="Player 2" myTurn={this.state.p2Turn} endTurn={this.swapTurn} />
       </div>
